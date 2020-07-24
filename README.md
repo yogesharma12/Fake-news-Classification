@@ -1,2 +1,2 @@
 # Fake-news-Identification
-using Naive Bayes Classifier
+using Multinomial Naive Bayes Classifier and TF-IDF
