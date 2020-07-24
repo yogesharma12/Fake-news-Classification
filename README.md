@@ -1,2 +1,2 @@
 # Fake-news-Identification
-usig Naive Bayes Classifier
+using Naive Bayes Classifier
