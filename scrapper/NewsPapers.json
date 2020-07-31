@@ -1,0 +1,75 @@
+{ "newyorktimes_business":{
+    "link": "https://www.nytimes.com/section/business"
+  },
+  "newyorktimes_science":{
+    "link": "https://www.nytimes.com/section/science"
+  },
+  "newyorktimes_technology":{
+    "link": "https://www.nytimes.com/section/technology"
+  },
+  "cnbc_top_news": {
+    "link": "https://www.cnbc.com/"
+ },
+  "cnbc_investing":{
+    "link": "https://www.cnbc.com/investing/"
+},
+  "entrepreneur_latest": {
+    "link": "https://www.entrepreneur.com/"
+ },
+  "entrepreneur_marketing": {
+    "link": "https://www.entrepreneur.com/topic/marketing"
+ },
+ "fivethirtyeight_science":{
+     "link": "https://fivethirtyeight.com/science/"
+ },
+ "fivethirtyeight_economics":{
+     "link": "https://fivethirtyeight.com/economics/"
+ },
+ 
+"theguardian":{
+        "link": "https://www.theguardian.com/international"
+},
+"washington_post":{
+        "link": "https://www.washingtonpost.com/"
+},
+
+
+"americanflavor":{
+    "link" : "https://americanflavor.news/category/public-health/"
+},
+
+"bb4sp":{
+    "link":"https://bb4sp.com/tag/donald-trump/"
+},
+"beforeitsnews":{
+    "link":"https://beforeitsnews.com"
+},
+"clashdaily":{
+    "link":"https://clashdaily.com"
+},
+"conservativedailypost":{
+    "link":"https://conservativedailypost.com/category/politics/"
+},
+"dailybuzzlive":{
+    "link":"http://dailybuzzlive.com/category/news/"
+},
+"corporatedispatch":{
+    "link":"https://corporatedispatch.com/newsfeed/"
+},
+"dailysurge":{
+    "link":"https://dailysurge.com/category/news/"
+},
+"democraticunderground":{
+    "link":"https://democraticunderground.com"
+},
+"en-volve":{
+    "link":"https://en-volve.com/reaction/fake-news/"
+},
+"newspunch":{
+    "link":"https://newspunch.com/category/science-environment/"
+},
+"usasupreme":{
+    "link":"https://www.usasupreme.com/category/politics/world-politics/"
+}
+
+}
