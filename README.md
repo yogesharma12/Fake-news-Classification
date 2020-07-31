@@ -35,6 +35,21 @@ The main objective is to detect the fake news, which is a text classification pr
     5.1 fakenewssites.csv
     5.2 forfakenews.ipynb
     
+## Various Stages 
+1. Data Collection
+2. Data preprocessing 
+3. Preprocessing the Text
+4. Classification + model selection
+5. Validation of Model
     
-## First Step - COLLECTING DATA
+    
+## First Step - DATA COLLECTION
+
+First of all find the reliable news sources for 'Real News' and unreliable news sources to gather 'Fake News' .
+Create a json file "NewsPapers.json" Put the links of all reliable sources first and then put links for fake news.
+Build a web scrapper for scrapping news articles from the links given in "NewsPapers.json" and store the articles in "scraped_articles.json".
+
+## Second Step - Data preprocessing
+
+
 
