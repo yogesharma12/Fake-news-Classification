@@ -18,4 +18,23 @@ The main objective is to detect the fake news, which is a text classification pr
 6. NLTK
 7. sklearn 
 
+## Directories
+1. data_cleaning 
+    1.1 cleaning_helper.py
+2. notebooks
+    2.1 read_json_and_clean.ipynb
+    2.2 train_test_model.ipynb
+3. savedFiles
+    3.1 cleaned_df.pkl
+    3.2 dirty_df.pkl
+4. scrapper
+    4.1 NewsPapers.json
+    4.2 scraped_articles.json
+    4.3 scrapper.py
+5. to extract fake news sites
+    5.1 fakenewssites.csv
+    5.2 forfakenews.ipynb
+    
+    
+## First Step - COLLECTING DATA
 
