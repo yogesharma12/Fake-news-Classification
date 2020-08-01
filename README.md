@@ -51,5 +51,22 @@ Build a web scrapper for scrapping news articles from the links given in "NewsPa
 
 ## Second Step - Data preprocessing
 
+After storing the articles in "scraped_articles.json" we have to retrive data from it and build a dataframe out of it.
+After building dataframe remove the unwanted columns and extract the wanted features . 
+In this case wanted features are - "title" - title of article , "text" - content of the article , "link" - url of the article , "author" - author of the article.
+Now we have to label the articles - for articles that are scrapped from real news sources are to be marked with label "0" i.e. "not fake" or real news.
+and articles that are scrapped from fake news sources are to be marked with label "1" i.e. "fake news".
+Now we have 5 features of the given dataset - title, text, link, author and label.
+
+## Third Step - Preprocessing the Text (or cleaning the text)
+
+In this step we use Data mining techniques or NLP (Natural Language Processing) .
+With the help of "cleaning_helper.py" first we have to lowercase all the text and title.
+After that we have to remove Stopword (a, and, but, the, or ... etc.) from our text data because stopwords does not provide much information about the text.
+After that we need to remove punctuations ('!"$%&\'()*+,-./:;<#=>?@[\\]“”^_~’' etc) and digits also.
+At this moment we have 7 features in the dataset - title, text, link, author, label, clean_title and clean_text.
+Now save this dataset as "cleaned_df.pkl".
+
+## Fourth Step - Classification + model selection
 
 
