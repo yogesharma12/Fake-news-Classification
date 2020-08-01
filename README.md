@@ -43,13 +43,13 @@ The main objective is to detect the fake news, which is a text classification pr
 5. Validation of Model
     
     
-## First Step - DATA COLLECTION
+### First Step - DATA COLLECTION
 
 First of all find the reliable news sources for 'Real News' and unreliable news sources to gather 'Fake News' .
 Create a json file "NewsPapers.json" Put the links of all reliable sources first and then put links for fake news.
 Build a web scrapper for scrapping news articles from the links given in "NewsPapers.json" and store the articles in "scraped_articles.json".
 
-## Second Step - Data preprocessing
+### Second Step - Data preprocessing
 
 After storing the articles in "scraped_articles.json" we have to retrive data from it and build a dataframe out of it.
 After building dataframe remove the unwanted columns and extract the wanted features . 
@@ -58,7 +58,7 @@ Now we have to label the articles - for articles that are scrapped from real new
 and articles that are scrapped from fake news sources are to be marked with label "1" i.e. "fake news".
 Now we have 5 features of the given dataset - title, text, link, author and label.
 
-## Third Step - Preprocessing the Text (or cleaning the text)
+### Third Step - Preprocessing the Text (or cleaning the text)
 
 In this step we use Data mining techniques or NLP (Natural Language Processing) .
 With the help of "cleaning_helper.py" first we have to lowercase all the text and title.
@@ -67,6 +67,10 @@ After that we need to remove punctuations ('!"$%&\'()*+,-./:;<#=>?@[\\]“”^_~
 At this moment we have 7 features in the dataset - title, text, link, author, label, clean_title and clean_text.
 Now save this dataset as "cleaned_df.pkl".
 
-## Fourth Step - Classification + model selection
+### Fourth Step - Classification + model selection
 
+First we have to create a TF-IDF vector and transform the clean_title and clean_text data values into this vector.
+Now using train_test_split() method we have to split the given dataset into "Training Dataset" (80%) and "Test Dataset" (20%).
+Then import MultinomialNB(Naive Bayes Model) from sklearn and build a classifier (in this case named - "nb_body") 
+Then fit the tf-idf vectorized data into the Naive Bayes Model(this is the training of classification Model).
 
