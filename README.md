@@ -40,7 +40,7 @@ The main objective is to detect the fake news, which is a text classification pr
 2. Data preprocessing 
 3. Preprocessing the Text
 4. Classification + model selection
-5. Validation of Model
+5. Evaluation of Model
     
     
 ### First Step - DATA COLLECTION
@@ -70,7 +70,10 @@ Now save this dataset as "cleaned_df.pkl".
 ### Fourth Step - Classification + model selection
 
 First we have to create a TF-IDF vector and transform the clean_title and clean_text data values into this vector.
-Now using train_test_split() method we have to split the given dataset into "Training Dataset" (80%) and "Test Dataset" (20%).
+Now using train_test_split() method of model selection we have to split the given dataset into "Training Dataset" (80%) and "Test Dataset" (20%).
 Then import MultinomialNB(Naive Bayes Model) from sklearn and build a classifier (in this case named - "nb_body") 
 Then fit the tf-idf vectorized data into the Naive Bayes Model(this is the training of classification Model).
 
+### Fifth Step - Evaluation of Model
+
+Model evaluation step contains analysis of the trained model by calculating F1 score, Accuracy, precesion and recall value of the model.
