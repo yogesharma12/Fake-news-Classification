@@ -105,3 +105,9 @@ Then fit the tf-idf vectorized data into the Naive Bayes Model(this is the train
 
 Model evaluation step contains analysis of the trained model by calculating F1 score, Accuracy, precesion and recall value of the model.
 I have shown most common spam words and most common ham words with their number of occurance
+
+# Conclusion
+
+The most model to optimize for accuracy in detecting fake news and absurd news uses TfidfVectorizer and MultinomialDB. The optimal parameters for this model are where ngram_range = (1,2) and alpha = 0.1.
+
+Accuracy: 94.41 % Precision: 92.68 % Recall: 86.36 % F1 score: 89.41 %
