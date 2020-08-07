@@ -1,5 +1,5 @@
 # Fake-news-Classification
-using Multinomial Naive Bayes Classifier and TF-IDF
+using Multinomial Naive Bayes Classifier and TF-IDF Vectorizer
 
 # ABSTRACT    
 This Project comes up with the applications of NLP (Natural Language Processing) techniques for detecting the 'fake news' (misleading news stories that comes from the non-reputable sources).Only by building a model based on a (Term Frequency Inverse Document Frequency) tfidf  matrix, (word tallies relative to how often they’re used in other articles in your dataset) can only get you so far. But these models do not consider the important qualities like word ordering and context. 
@@ -39,8 +39,9 @@ The main objective is to detect the fake news, which is a text classification pr
 1. Data Collection
 2. Data preprocessing 
 3. Preprocessing the Text
-4. Classification + model selection
-5. Evaluation of Model
+4. Model selection
+5. Classification
+6. Model Evaluation
     
     
 ### First Step - DATA COLLECTION
@@ -67,13 +68,40 @@ After that we need to remove punctuations ('!"$%&\'()*+,-./:;<#=>?@[\\]“”^_~
 At this moment we have 7 features in the dataset - title, text, link, author, label, clean_title and clean_text.
 Now save this dataset as "cleaned_df.pkl".
 
-### Fourth Step - Classification + model selection
+### Fourth Step - Model selection
 
-First we have to create a TF-IDF vector and transform the clean_title and clean_text data values into this vector.
+First we will remove some columns('title','text','label','author','link', 'clean_title') from our dataset because we only need clean_text for our classification .
+I created a column called 'fake' by copying the 'label' column.
+Now we have only 2 columns in our dataset - 'clean_text' and 'fake'.
+
 Now using train_test_split() method of model selection we have to split the given dataset into "Training Dataset" (80%) and "Test Dataset" (20%).
+Now using pipelining we will create 4 models to check the performance and select the best Model.
+#### Model 1 - Countvectorizer and MultinomialNB
+Best score: 0.9128957473013113
+Train score 0.9968895800933126
+Test score 0.9440993788819876
+#### Model 2 - tfidfvectorizer and MultinomialNB
+Best score: 0.9175024224806201
+Train score 0.9906687402799378
+Test score 0.9440993788819876
+#### Model 3 - tfidfvectorizer and logistic regression
+Best score: 0.8242700862131421
+Train score 0.9129082426127527
+Test score 0.8385093167701864
+#### Model 4 - countvectorizer and LogisticRegression
+Best score: 0.919126276896327
+Train score 1.0
+Test score 0.9254658385093167
+
+##### The best Model on the basis of Best score is tfidfvectorizer and MultinomialNB.
+
+### Fifth Step - Classification
+
+We have to create a TF-IDF vector and transform the clean_text data values into this vector.
 Then import MultinomialNB(Naive Bayes Model) from sklearn and build a classifier (in this case named - "nb_body") 
 Then fit the tf-idf vectorized data into the Naive Bayes Model(this is the training of classification Model).
 
-### Fifth Step - Evaluation of Model
+### Sixth Step - Model Evaluation
 
 Model evaluation step contains analysis of the trained model by calculating F1 score, Accuracy, precesion and recall value of the model.
+I have shown most common spam words and most common ham words with their number of occurance
